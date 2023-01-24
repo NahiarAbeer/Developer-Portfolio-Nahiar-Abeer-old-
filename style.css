@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #292929;
+    color: #CCCCCC;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 135px;
+    align-items: center;
+    background: linear-gradient(120deg, rgba(255, 253, 253, 0.8), rgba(255, 253, 253, 0.78));
+    font-weight: 800;
+    z-index: 9999;
+}
+
+header nav {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header nav img {
+    position: relative;
+    display: flex;
+    justify-self: center;
+    max-width: 60px;
+    border-radius: 30%;
+    box-shadow: 0px 0px 68px 7px rgba(84, 27, 137, 0.82);
+    -webkit-box-shadow: 0px 0px 68px 7px rgba(84, 27, 137, 0.82);
+    -moz-box-shadow: 0px 0px 68px 7px rgba(84, 27, 137, 0.82);
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 0;
+    font-size: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+    margin: 0 30px;
+
+}
+
+header nav ul .active {
+    line-height: 24px;
+    font-weight: 800;
+    text-shadow: 0px 0px 15px rgb(255, 147, 0);
+    color: white;
+    background-color: rgb(255, 147, 0);
+    padding: 8px;
+    border-radius: 12px;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+
+    line-height: 22px;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all .3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    background: rgba(106, 18, 106, 0.84);
+    transform: translateY(10px);
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 68px 7px rgba(255, 215, 0, 0.5);
+}
+
+.frame {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+}
+
+.frame .image {
+    place-self: center;
+    grid-column: 1/ span 2;
+    max-width: 50%;
+    justify-content: center;
+    position: relative;
+    bottom: 100px;
+}
+
+.frame .image :nth-child(2) {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: #f9e000de;
+    color: #292929;
+    border-radius: 10px;
+    text-align: center;
+    animation-name: shadowfx;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shadowfx {
+    0% {
+        background-color: rgba(255, 215, 0, 1);
+        box-shadow: 0px 0px 68px 7px rgba(255, 215, 0, 0.5);
+    }
+
+    50% {
+        box-shadow: 0px 0px 68px 7px rgba(106, 18, 106, 0.84);
+    }
+
+    100% {
+        box-shadow: 0px 0px 68px 7px rgba(255, 215, 0, 0.5);
+    }
+}
+
+.frame .intro {
+    position: relative;
+    grid-column: 1/span 2;
+    text-align: center;
+    grid-row: 2/span 5;
+    background-color: #6E07F3;
+    min-height: 500px;
+    padding: 30px 260px;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.frame .intro .head {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+}
+
+.frame .intro:last-child {
+    font-weight: 600;
+}
+
+.frame .intro .description .l {
+    color: #FF69B4;
+}
+
+.frame .fade-in {
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.frame .fade-in.visible {
+    opacity: 1;
+}
+.frame .skills  {
+    top: -30px;
+    min-height: 200px;
+    position: relative;
+    border-radius: 13px;
+    grid-column: 1/span 2;
+    grid-row: 7/span 10;
+    place-self: center;
+    width: 80%;
+    color: #6E07F3;
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 50px 7px #000;
+    padding: 5px 20px;
+
+}
+.frame .skills ul {
+    place-self: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.frame .skills ul span {
+    width: 150px;
+}
+.frame .skills ul span li {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly ;
+}
+.frame .skills h1 {
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    header {
+        height: 100px;
+        z-index: 9999999;
+    }
+
+    header nav img {
+        top: 10px;
+        width: 40px;
+    }
+
+    header nav ul li {
+        font-size: small;
+        margin: 0 3px;
+        border-radius: 8px;
+    }
+
+    header nav ul li a {
+        font-size: small;
+        border-radius: 8px;
+    }
+
+    .frame .image {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .frame .image img {
+
+        place-self: center;
+        max-width: 90%;
+    }
+
+    .frame .intro {
+        padding: 30px 60px;
+    }
+}
