@@ -1,13 +1,20 @@
-// // Get the div
-// var fadeInDiv = document.querySelector(".fade-in");
+const box= document.querySelectorAll('.box ')
+// let info=document.getElementById('intro')
+window.addEventListener('scroll', function() {
+    let scroll=(window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    console.log(scroll)
+    if (scroll>=42){
+        
+        box[0].classList.add('visible');
+        
+    } 
+    if(scroll>=80){
+        
+        box[1].classList.add('visible');
+    }
+    // else{
+    //     box.style.display='none'
 
-// // Get the offset position of the div
-// var fadeInDivPosition = fadeInDiv.getBoundingClientRect().top;
-
-// // Add the class to the div when the user scrolls down and the div is in view
-// window.addEventListener("scroll", function () {
-//     if (window.pageYOffset > fadeInDivPosition) {
-//         fadeInDiv.classList.add("visible");
-//     }
-// });
-alert("Welcome to My Website")
+    // }
+  });
+  
